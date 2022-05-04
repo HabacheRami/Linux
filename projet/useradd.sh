@@ -8,7 +8,7 @@ login=$(cat $file | cut -d: -f1)
 
 #Boucle création utilisateur 
 for user in $login
-do
+do	# w pour les lignes contenant le mot
 	pwd=$(grep -w "$user" $file | cut -d":" -f4)
 	name=$(grep -w "$user" $file | cut -d":" -f3)
 	firstname=$(grep -w "$user" $file | cut -d":" -f2)
