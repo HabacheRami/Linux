@@ -4,7 +4,7 @@ if [[ -f "$file" ]];
 then
 	for i in ${array[@]}
 	do 	
-
+		# correspondance complete de la ligne
 		test=$(grep -x "$i" $file)
 		if [[ -z $test ]];
 		then
