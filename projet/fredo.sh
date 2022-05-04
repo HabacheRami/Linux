@@ -1,6 +1,6 @@
 
-find /home/ -maxdepth 1 -type d -exec du -sh {} \; | sort -h | head -5
-
+du -sh /home/* | sort -h | head -5
+# s pour la somme des fichiers et h pour la taille humaine 
 size=($(du -sb $HOME))
 tmp=$((${size[0]}))
 
